@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Price Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="make">Make:</label>
+                <input type="text" name="make" required>
+            </div>
+            <div class="form-group">
+                <label for="model">Model:</label>
+                <input type="text" name="model" required>
+            </div>
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="number" name="year" required>
+            </div>
+            <div class="form-group">
+                <label for="mileage">Mileage:</label>
+                <input type="number" name="mileage" required>
+            </div>
+            <div class="form-group">
+                <label for="condition">Condition:</label>
+                <input type="text" name="condition" required>
+            </div>
+            <button type="submit">Predict Price</button>
+        </form>
+        {% if predicted_price %}
+            <h2>Predicted Price: ${{ predicted_price }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
