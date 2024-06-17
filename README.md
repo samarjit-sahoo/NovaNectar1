@@ -1,1 +1,2 @@
 # NovaNectar1
+This project is a web application that predicts car prices based on various features such as make, model, year, mileage, and condition. The application leverages machine learning models to provide accurate price predictions and offers an intuitive web interface for user interaction.
